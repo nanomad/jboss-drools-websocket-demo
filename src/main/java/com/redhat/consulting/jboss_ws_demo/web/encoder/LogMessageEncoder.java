@@ -17,7 +17,7 @@ public class LogMessageEncoder implements Encoder.Text<LogMessage> {
     @Override
     public String encode(LogMessage object) throws EncodeException {
         return Json.createObjectBuilder()
-                .add("kind", "LogMessage")
+                .add("__type", "LogMessage")
                 .add("level", String.valueOf(object.getLevel()))
                 .add("message", object.getMessage())
                 .build()

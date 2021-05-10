@@ -17,7 +17,7 @@ public class WsConnectedMessageEncoder implements Encoder.Text<WsConnectedMessag
     @Override
     public String encode(WsConnectedMessage object) throws EncodeException {
         return Json.createObjectBuilder()
-                .add("kind", "WsConnectedMessage")
+                .add("__type", "WsConnectedMessage")
                 .add("id", object.getId())
                 .build()
                 .toString();

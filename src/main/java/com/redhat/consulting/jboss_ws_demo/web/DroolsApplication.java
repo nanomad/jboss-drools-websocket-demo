@@ -1,6 +1,4 @@
-package com.redhat.consulting.jboss_ws_demo.model;
-
-import com.redhat.consulting.jboss_ws_demo.web.DroolsResource;
+package com.redhat.consulting.jboss_ws_demo.web;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -11,7 +9,6 @@ public class DroolsApplication extends Application {
     private HashSet<Class<?>> classes = new HashSet<Class<?>>();
 
     public DroolsApplication() {
-        this.classes.add(DroolsResource.class);
     }
 
     @Override
